@@ -1,0 +1,5 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Box</title>
+<body style="font-family:system-ui;margin:3rem;max-width:34rem"><h1>Opening the box...</h1><p id=m>One moment.</p>
+<script>
+fetch('link.txt?t='+Date.now()).then(r=>r.text()).then(u=>{u=u.trim();if(!/^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/.test(u))throw 0;document.getElementById('m').innerHTML='Redirecting to <a href="'+u+'">'+u+'</a>';location.replace(u)}).catch(()=>{document.getElementById('m').textContent='The box is restarting. Try again in a minute.'})
+</script>
